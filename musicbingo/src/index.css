@@ -1,0 +1,172 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Playfair+Display:wght@400;700&display=swap');
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  background: #1e1e1e;
+  color: #333;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Main screen container */
+.screen {
+  background: #f6f1ea;
+  margin: 40px auto;
+  padding: 40px;
+  max-width: 1400px; /* wider for side-by-side layout */
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Flex container for video + Bingo card */
+.round-layout {
+  display: flex;
+  gap: 60px; /* horizontal space between video and card */
+  align-items: center; /* vertical centering */
+  justify-content: center;
+  width: 100%;
+  min-height: 500px;
+}
+
+/* Left and right columns */
+.left, .right {
+  flex: 0 0 auto; /* don't shrink too much */
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* vertical center for Bingo card */
+  width: 320px; /* card width */
+}
+
+/* Script text (Allura green) */
+.script {
+  font-family: 'Allura', cursive;
+  color: #7a846f;
+  font-size: 24px;
+}
+
+/* Title text (Playfair Display tan) */
+.title {
+  font-family: 'Playfair Display', serif;
+  color: #d6a191;
+  font-size: 48px;
+  margin-bottom: 24px;
+}
+
+/* Buttons */
+.start-btn {
+  background: #e4c4b8;
+  border: none;
+  padding: 14px 36px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-family: 'Playfair Display', serif;
+}
+
+.start-btn:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+/* Video container */
+.video-box {
+  width: 850px; /* slightly wider */
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #cfcfcf;
+}
+
+.video-box iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* Bingo card */
+.bingo-card {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 16px;
+  width: 100%;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.cell {
+  border: 1px solid #333;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.cell:hover {
+  background: #d6a19133;
+  cursor: pointer;
+}
+
+/* Highlighted cell */
+.highlight {
+  background-color: #d6a19188;
+  font-weight: 700;
+  color: #7a846f;
+  transition: background 0.3s ease;
+}
+
+/* Responsive: stack vertically on smaller screens */
+@media (max-width: 900px) {
+  .round-layout {
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .right {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .video-box {
+    width: 100%;
+    aspect-ratio: 16/9;
+  }
+}

@@ -1,0 +1,77 @@
+{
+    "rounds": [
+      {
+        "name": "Round 1 - Nick",
+        "owner": "Nick",
+        "playlist": [
+            {
+                "title": "Promiscuous",
+                "artist": "Nelly Fertado",
+                "youtube": "https://www.youtube.com/embed/0J3vgcE5i2o?si=_m4w3ubnk5pXLN-x",
+                "start": 0
+              },
+              {
+                "title": "No Hands",
+                "artist": "Waka Flocka Flame",
+                "youtube": "https://www.youtube.com/embed/skhxizRYxps?si=4AtQnf1LU0Q_NpFx&amp;start=9",
+                "start": 9
+              },
+              {
+                "title": "Fergalicious",
+                "artist": "Fergie",
+                "youtube": "https://www.youtube.com/embed/5T0utQ-XWGY?si=HPsEFGZYGuMHxGTK",
+                "start": 0
+              },
+              {
+                "title": "Buttons",
+                "artist": "The Pussycat Dolls",
+                "youtube": "https://www.youtube.com/embed/VCLxJd1d84s?si=MaTzTnWauFQsEar1&amp;start=19",
+                "start": 19
+              },
+              {
+                "title": "DONTTRUSTME",
+                "artist": "3OH!3",
+                "youtube": "https://www.youtube.com/embed/mdB3Oyd5HtU?si=BySKORPEjmOJjjw9&amp;start=29",
+                "start": 29
+              }
+        ]
+      },
+      {
+        "name": "Round 2 - Maddie",
+        "owner": "Maddie",
+        "playlist": [
+          {
+            "title": "Promiscuous",
+            "artist": "Nelly Fertado",
+            "youtube": "https://www.youtube.com/embed/0J3vgcE5i2o?si=_m4w3ubnk5pXLN-x",
+            "start": 0
+          },
+          {
+            "title": "No Hands",
+            "artist": "Waka Flocka Flame",
+            "youtube": "https://www.youtube.com/embed/skhxizRYxps?si=4AtQnf1LU0Q_NpFx&amp;start=9",
+            "start": 9
+          },
+          {
+            "title": "Fergalicious",
+            "artist": "Fergie",
+            "youtube": "https://www.youtube.com/embed/5T0utQ-XWGY?si=HPsEFGZYGuMHxGTK",
+            "start": 0
+          },
+          {
+            "title": "Buttons",
+            "artist": "The Pussycat Dolls",
+            "youtube": "https://www.youtube.com/embed/VCLxJd1d84s?si=MaTzTnWauFQsEar1&amp;start=19",
+            "start": 19
+          },
+          {
+            "title": "DONTTRUSTME",
+            "artist": "3OH!3",
+            "youtube": "https://www.youtube.com/embed/mdB3Oyd5HtU?si=BySKORPEjmOJjjw9&amp;start=29",
+            "start": 29
+          }
+        ]
+      }
+    ]
+  }
+  
