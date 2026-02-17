@@ -4,18 +4,10 @@ import Round from "./components/Round";
 
 export default function App() {
   const [screen, setScreen] = useState("home");
-  const [round, setRound] = useState(1);
 
   if (screen === "home") {
-    return <Home onStart={() => setScreen("round")} />;
+    return <Home onStart={() => setScreen("game")} />;
   }
 
-  return (
-    <Round
-      round={round}
-      playerName={round === 1 ? "Nick" : "Maddie"}
-      gameStarted={true}
-      onNextRound={() => setRound((r) => r + 1)}
-    />
-  );
+  return <Round gameStarted={true} />;
 }

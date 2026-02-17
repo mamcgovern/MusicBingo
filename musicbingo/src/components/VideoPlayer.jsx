@@ -1,31 +1,37 @@
 import { useEffect, useRef, useState } from "react";
 import playlistData from "../playlist.json";
 
-export default function VideoPlayer({ round, startGame }) {
+export default function VideoPlayer({ startGame }) {
   const playerRef = useRef(null);
   const playerInstance = useRef(null);
   const timerRef = useRef(null);
-  const [currentSong, setCurrentSong] = useState(null);
+  const progressIntervalRef = useRef(null);
+
   const playlistRef = useRef([]);
   const songIndexRef = useRef(0);
 
+  const [currentSong, setCurrentSong] = useState(null);
+  const [progress, setProgress] = useState(0);
+
   useEffect(() => {
-    if (!round || !startGame) return;
+    if (!startGame) return;
 
-    const roundPlaylist = playlistData.rounds[round - 1].playlist;
-
-    // Shuffle the playlist
-    playlistRef.current = shuffleArray([...roundPlaylist]);
+    // Shuffle full playlist (your data is just an array)
+    playlistRef.current = shuffleArray([...playlistData]);
     songIndexRef.current = 0;
 
-    // Load YouTube IFrame API if needed
     const loadPlayer = () => {
       if (playerInstance.current) return;
 
       playerInstance.current = new window.YT.Player(playerRef.current, {
-        height: "315",
-        width: "560",
-        playerVars: { autoplay: 1, controls: 0, rel: 0 },
+        height: "390",
+        width: "640",
+        playerVars: {
+          autoplay: 1,
+          controls: 0,
+          rel: 0,
+          modestbranding: 1,
+        },
         events: {
           onReady: () => {
             playNextSong();
@@ -34,6 +40,7 @@ export default function VideoPlayer({ round, startGame }) {
       });
     };
 
+    // Load YouTube API if needed
     if (!window.YT) {
       const tag = document.createElement("script");
       tag.src = "https://www.youtube.com/iframe_api";
@@ -45,8 +52,7 @@ export default function VideoPlayer({ round, startGame }) {
 
     function playNextSong() {
       if (songIndexRef.current >= playlistRef.current.length) {
-        // End of playlist: reshuffle
-        playlistRef.current = shuffleArray([...roundPlaylist]);
+        playlistRef.current = shuffleArray([...playlistData]);
         songIndexRef.current = 0;
       }
 
@@ -54,13 +60,31 @@ export default function VideoPlayer({ round, startGame }) {
       setCurrentSong(song);
 
       const videoId = getVideoId(song.youtube);
-      const startTime = song.start || 0; // default to 0 if not provided
+      const startTime = song.start || 0;
 
-      playerInstance.current.loadVideoById({ videoId, startSeconds: startTime });
+      playerInstance.current.loadVideoById({
+        videoId,
+        startSeconds: startTime,
+      });
 
       songIndexRef.current += 1;
 
+      // Reset progress
+      setProgress(0);
+
+      clearTimeout(timerRef.current);
+      clearInterval(progressIntervalRef.current);
+
+      // 30 second song timer
       timerRef.current = setTimeout(playNextSong, 30000);
+
+      // Animate progress bar (updates every 100ms)
+      progressIntervalRef.current = setInterval(() => {
+        setProgress((prev) => {
+          const next = prev + (100 / 300); // 300 updates over 30s
+          return next >= 100 ? 100 : next;
+        });
+      }, 100);
     }
 
     function getVideoId(url) {
@@ -79,22 +103,36 @@ export default function VideoPlayer({ round, startGame }) {
 
     return () => {
       clearTimeout(timerRef.current);
+      clearInterval(progressIntervalRef.current);
+
       if (playerInstance.current) {
         playerInstance.current.destroy();
         playerInstance.current = null;
       }
     };
-  }, [round, startGame]);
+  }, [startGame]);
 
   return (
-    <div>
-      <h3>Now Playing:</h3>
+    <div className="video-wrapper">
+      <h3 className="now-playing">Now Playing</h3>
+
       {currentSong ? (
-        <p>{currentSong.title} - {currentSong.artist}</p>
+        <p className="song-info">
+          {currentSong.title} — {currentSong.artist}
+        </p>
       ) : (
         <p>Loading song...</p>
       )}
-      <div ref={playerRef}></div>
+
+      <div ref={playerRef} className="youtube-player" />
+
+      {/* Progress Bar */}
+      <div className="timer-bar">
+        <div
+          className="timer-fill"
+          style={{ width: `${progress}%` }}
+        />
+      </div>
     </div>
   );
 }
