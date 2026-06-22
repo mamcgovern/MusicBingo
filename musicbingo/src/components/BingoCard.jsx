@@ -1,12 +1,11 @@
 import React from "react";
 
 const patterns = {
-  N: [0, 5, 10, 15, 20, 4, 9, 14, 19, 6, 12, 18, 24],
-  M: [0, 5, 10, 15, 20, 4, 9, 14, 8, 19, 6, 12, 24],
+  Heart: [6, 8, 10, 12, 14, 16, 18, 22],
   Blackout: Array.from({ length: 25 }, (_, i) => i),
 };
 
-export default function BingoCard({ pattern = "N" }) {
+export default function BingoCard({ pattern = "Heart" }) {
   const highlightedCells = patterns[pattern];
 
   return (

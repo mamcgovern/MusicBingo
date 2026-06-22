@@ -1,34 +1,57 @@
 import { useEffect, useRef, useState } from "react";
 import playlistData from "../playlist.json";
 
-export default function VideoPlayer({ round, startGame }) {
+export default function VideoPlayer({ startGame }) {
   const playerRef = useRef(null);
   const playerInstance = useRef(null);
   const timerRef = useRef(null);
-  const [currentSong, setCurrentSong] = useState(null);
+
   const playlistRef = useRef([]);
   const songIndexRef = useRef(0);
 
+  const timePerRound = 5000; //TODO change to 30000
+
+  const remainingTimeRef = useRef(timePerRound);
+  const timerStartRef = useRef(null);
+
+  const [currentSong, setCurrentSong] = useState(null);
+
   useEffect(() => {
-    if (!round || !startGame) return;
+    if (!startGame) return;
 
-    const roundPlaylist = playlistData.rounds[round - 1].playlist;
+    const availableSongs = playlistData.filter(
+      (song) => song.youtube && song.youtube.trim() !== ""
+    );
 
-    // Shuffle the playlist
-    playlistRef.current = shuffleArray([...roundPlaylist]);
+    playlistRef.current = shuffleArray([...availableSongs]);
     songIndexRef.current = 0;
 
-    // Load YouTube IFrame API if needed
     const loadPlayer = () => {
       if (playerInstance.current) return;
 
       playerInstance.current = new window.YT.Player(playerRef.current, {
         height: "315",
         width: "560",
-        playerVars: { autoplay: 1, controls: 0, rel: 0 },
+        playerVars: {
+          autoplay: 1,
+          controls: 1,
+          rel: 0,
+        },
         events: {
           onReady: () => {
             playNextSong();
+          },
+
+          onStateChange: (event) => {
+            // Pause timer when video pauses
+            if (event.data === window.YT.PlayerState.PAUSED) {
+              pauseSongTimer();
+            }
+
+            // Resume timer when video resumes
+            if (event.data === window.YT.PlayerState.PLAYING) {
+              resumeSongTimer();
+            }
           },
         },
       });
@@ -44,9 +67,10 @@ export default function VideoPlayer({ round, startGame }) {
     }
 
     function playNextSong() {
+      clearTimeout(timerRef.current);
+
       if (songIndexRef.current >= playlistRef.current.length) {
-        // End of playlist: reshuffle
-        playlistRef.current = shuffleArray([...roundPlaylist]);
+        playlistRef.current = shuffleArray([...availableSongs]);
         songIndexRef.current = 0;
       }
 
@@ -54,46 +78,112 @@ export default function VideoPlayer({ round, startGame }) {
       setCurrentSong(song);
 
       const videoId = getVideoId(song.youtube);
-      const startTime = song.start || 0; // default to 0 if not provided
 
-      playerInstance.current.loadVideoById({ videoId, startSeconds: startTime });
+      playerInstance.current.loadVideoById({
+        videoId,
+        startSeconds: song.start || 0,
+      });
 
-      songIndexRef.current += 1;
+      songIndexRef.current++;
 
-      timerRef.current = setTimeout(playNextSong, 30000);
+      remainingTimeRef.current = timePerRound;
+    }
+
+    function startSongTimer() {
+      clearTimeout(timerRef.current);
+
+      timerStartRef.current = Date.now();
+
+      timerRef.current = setTimeout(() => {
+        remainingTimeRef.current = timePerRound;
+        playNextSong();
+      }, remainingTimeRef.current);
+    }
+
+    function pauseSongTimer() {
+      if (!timerStartRef.current) return;
+
+      clearTimeout(timerRef.current);
+
+      const elapsed = Date.now() - timerStartRef.current;
+      remainingTimeRef.current = Math.max(
+        0,
+        remainingTimeRef.current - elapsed
+      );
+    }
+
+    function resumeSongTimer() {
+      clearTimeout(timerRef.current);
+
+      timerStartRef.current = Date.now();
+
+      timerRef.current = setTimeout(() => {
+        remainingTimeRef.current = timePerRound;
+        playNextSong();
+      }, remainingTimeRef.current);
     }
 
     function getVideoId(url) {
-      const regex = /(?:v=|\/embed\/|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
-      const match = url.match(regex);
-      return match ? match[1] : url;
+      const match = url.match(
+        /(?:youtube\.com\/embed\/|youtu\.be\/)([a-zA-Z0-9_-]{11})/
+      );
+
+      return match ? match[1] : "";
     }
 
     function shuffleArray(array) {
-      for (let i = array.length - 1; i > 0; i--) {
+      const shuffled = [...array];
+
+      for (let i = shuffled.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
+
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
       }
-      return array;
+
+      return shuffled;
     }
+
+    // Make timer functions available to onStateChange
+    window.startSongTimer = startSongTimer;
+    window.resumeSongTimer = resumeSongTimer;
+    window.pauseSongTimer = pauseSongTimer;
+
+    // Start timer once first song loads
+    const timerStarter = setInterval(() => {
+      if (
+        playerInstance.current &&
+        playerInstance.current.getPlayerState &&
+        playerInstance.current.getPlayerState() ===
+          window.YT.PlayerState.PLAYING
+      ) {
+        startSongTimer();
+        clearInterval(timerStarter);
+      }
+    }, 250);
 
     return () => {
       clearTimeout(timerRef.current);
+      clearInterval(timerStarter);
+
       if (playerInstance.current) {
         playerInstance.current.destroy();
         playerInstance.current = null;
       }
     };
-  }, [round, startGame]);
+  }, [startGame]);
 
   return (
     <div>
       <h3>Now Playing:</h3>
+
       {currentSong ? (
-        <p>{currentSong.title} - {currentSong.artist}</p>
+        <p>
+          {currentSong.title} - {currentSong.artist}
+        </p>
       ) : (
         <p>Loading song...</p>
       )}
+
       <div ref={playerRef}></div>
     </div>
   );
