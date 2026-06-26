@@ -1,452 +1,534 @@
 [
-    {
-        "title": "Promiscuous",
-        "artist": "Nelly Fertado",
-        "youtube": "https://www.youtube.com/embed/0J3vgcE5i2o?si=_m4w3ubnk5pXLN-x",
-        "start": 0
-    },
-    {
-        "title": "No Hands",
-        "artist": "Waka Flocka Flame",
-        "youtube": "https://www.youtube.com/embed/skhxizRYxps?si=4AtQnf1LU0Q_NpFx&amp;start=9",
-        "start": 9
-    },
-    {
-        "title": "Fergalicious",
-        "artist": "Fergie",
-        "youtube": "https://www.youtube.com/embed/5T0utQ-XWGY?si=HPsEFGZYGuMHxGTK",
-        "start": 0
-    },
-    {
-        "title": "Buttons",
-        "artist": "The Pussycat Dolls",
-        "youtube": "https://www.youtube.com/embed/VCLxJd1d84s?si=MaTzTnWauFQsEar1&amp;start=19",
-        "start": 19
-    },
-    {
-        "title": "DONTTRUSTME",
-        "artist": "3OH!3",
-        "youtube": "https://www.youtube.com/embed/mdB3Oyd5HtU?si=BySKORPEjmOJjjw9&amp;start=29",
-        "start": 29
-    },
-    {
-        "title": "Bottoms Up",
-        "artist": "Trey Songz",
-        "youtube": "https://www.youtube.com/embed/ekAXPCphKXQ?si=RY85WmiOwTofnvCv&amp;start=165",
-        "start": 160
-    },
-    {
-        "title": "Maneater",
-        "artist": "Nelly Fertado",
-        "youtube": "https://www.youtube.com/embed/PLolag3YSYU?si=FwQCoG0Gm_QI_u2H",
-        "start": 131
-    },
-    {
-        "title": "1,2 Step",
-        "artist": "Ciara",
-        "youtube": "https://www.youtube.com/embed/iBHNgV6_znU?si=qbdeptdxl2-KVz4j",
-        "start": 0
-    },
-    {
-        "title": "Say My Name",
-        "artist": "Destiny's Child",
-        "youtube": "https://www.youtube.com/embed/sQgd6MccwZc?si=0g1UzsXDqa93cQXc",
-        "start": 0
-    },
-    {
-        "title": "I Don't Like",
-        "artist": "Chief Keef",
-        "youtube": "https://www.youtube.com/embed/6g5ZF6DUrHI?si=xmzBMhLkGQKnkIAY",
-        "start": 8
-    },
-    {
-        "title": "Lose My Breath",
-        "artist": "Destiny's Child",
-        "youtube": "https://www.youtube.com/embed/AqeIiF0DlTg?si=QlKzrEnDYgGofhOU",
-        "start": 57
-    },
-    {
-        "title": "Did It On'em",
-        "artist": "Nicki Minaj",
-        "youtube": "https://www.youtube.com/embed/iKk94CzHz50?si=J0SY8jgp98W9SpSh",
-        "start": 91
-    },
-    {
-        "title": "No Scrubs",
-        "artist": "TLC",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Dirty Little Secret",
-        "artist": "The All-American Rejects",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Want U Back",
-        "artist": "Cher Lloyd",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Itty Bitty Piggy",
-        "artist": "Nicki Minaj",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Irreplaceable",
-        "artist": "Beyonce",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Now That We Don't Talk",
-        "artist": "Taylor Swift",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "The Way I Loved You",
-        "artist": "Taylor Swift",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Mr. Brightside",
-        "artist": "The Killers",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "The Spins",
-        "artist": "Mac Miller",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Chasing Cars",
-        "artist": "Snow Patrol",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Ribs",
-        "artist": "Lorde",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Red Ruby Da Sleeze",
-        "artist": "Nicki Minaj",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "The Last Time",
-        "artist": "Taylor Swift",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Red Wine Supernova",
-        "artist": "Chappell Roan",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "If U Seek Amy",
-        "artist": "Britney Spears",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "3",
-        "artist": "Britney Spears",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Still Into You",
-        "artist": "Paramore",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Teenage Dirtbag",
-        "artist": "Wheatus",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Lemonade",
-        "artist": "Gucci Mane",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Crazy Story",
-        "artist": "King Von",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "33 Max Verstappen",
-        "artist": "Maxx Power",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "King of My Heart",
-        "artist": "Taylor Swift",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Money Trees",
-        "artist": "Kendrick Lamar",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Collard Greens",
-        "artist": "ScHoolboy Q",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Backseat Freestyle",
-        "artist": "Kendrick Lamar",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Umbrella",
-        "artist": "Rihanna",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "My Humps",
-        "artist": "Black Eyed Peas",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Beautiful Girls",
-        "artist": "Sean Kingston",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Ms. Jackson",
-        "artist": "Outkast",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Orange Juice",
-        "artist": "Noah Kahan",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "How Did It End?",
-        "artist": "Taylor Swift",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "my tears ricochet",
-        "artist": "Taylor Swift",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Like You Do",
-        "artist": "Joji",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Hits Different",
-        "artist": "Taylor Swift",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Ivy",
-        "artist": "Frank Ocean",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "White Ferrari",
-        "artist": "Frank Ocean",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Rockland",
-        "artist": "Gracie Abrams",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Dial Drunk",
-        "artist": "Noah Kahan",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Chun-Li",
-        "artist": "Nicki Minaj",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Barbie Dangerous",
-        "artist": "Nicki Minaj",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Hate Bein' Sober",
-        "artist": "Chief Keef",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Sports car",
-        "artist": "Tate McRae",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Purple Lace Bra",
-        "artist": "Tate McRae",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Sure Thing",
-        "artist": "Miguel",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Father Figure",
-        "artist": "Taylor Swift",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "6 Foot 7 Foot",
-        "artist": "Lil Wayne",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "A Milli",
-        "artist": "Lil Wayne",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Glamorous",
-        "artist": "Fergie",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Tipsy",
-        "artist": "J-Kwon",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Hot In Herre",
-        "artist": "Nelly",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Don't Cha",
-        "artist": "The Pussycat Dolls",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Beez in The Trap",
-        "artist": "Nicki Minaj",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "London Bridge",
-        "artist": "Fergie",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Cruel Summer",
-        "artist": "Taylor Swift",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Our Song",
-        "artist": "Taylor Swift",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Picture to Burn",
-        "artist": "Taylor Swift",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Pound The Alarm",
-        "artist": "Nicki Minaj",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Kiss Me Thru The Phone",
-        "artist": "Soulja Boy",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "I Don't Want This Night To End",
-        "artist": "Luke Bryan",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "willow",
-        "artist": "Taylor Swift",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Travelin' Soldier",
-        "artist": "The Chicks",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Someone Else Calling You Baby",
-        "artist": "Luke Bryan",
-        "youtube": "",
-        "start": 0
-    },
-    {
-        "title": "Do I",
-        "artist": "Luke Bryan",
-        "youtube": "",
-        "start": 0
-    }
+  {
+    "name": "Both",
+    "title": "Love Story",
+    "artist": "Taylor Swift",
+    "youtube": "https://www.youtube.com/embed/8xg3vE8Ie_E?si=Tj2B9rEFAfzOGBC7",
+    "start": 48
+  },
+  {
+    "name": "Both",
+    "title": "Travelin' Soldier",
+    "artist": "The Chicks",
+    "youtube": "https://www.youtube.com/embed/AbfgxznPmZM?si=iZ_rsPAk0QlidJs6",
+    "start": 60
+  },
+  {
+    "name": "Both",
+    "title": "Teenage Dirtbag",
+    "artist": "Wheatus",
+    "youtube": "https://www.youtube.com/embed/FC3y9llDXuM?si=1HgBMppkFxzfKR4t",
+    "start": 36
+  },
+  {
+    "name": "Both",
+    "title": "Dirty Little Secret",
+    "artist": "The All-American Rejects",
+    "youtube": "https://www.youtube.com/embed/gPDcwjJ8pLg?si=2n02UFq5COq1TRDW",
+    "start": 29
+  },
+  {
+    "name": "Both",
+    "title": "Goodbye Earl",
+    "artist": "The Chicks",
+    "youtube": "https://www.youtube.com/embed/Gw7gNf_9njs?si=L0y3L5eQM4aOqHne",
+    "start": 82
+  },
+  {
+    "name": "Both",
+    "title": "Ms. Jackson",
+    "artist": "Outkast",
+    "youtube": "https://www.youtube.com/embed/MYxAiK6VnXw?si=-glrKzrup5tK6FEj",
+    "start": 29
+  },
+  {
+    "name": "Both",
+    "title": "Picture To Burn",
+    "artist": "Taylor Swift",
+    "youtube": "https://www.youtube.com/embed/yCMqcFAigRg?si=tSf1lovHm_oEyf9O",
+    "start": 52
+  },
+  {
+    "name": "Both",
+    "title": "Should've Said No",
+    "artist": "Taylor Swift",
+    "youtube": "https://www.youtube.com/embed/f85AAi3VOLo?si=dPFHl_NIPhnKAJUt",
+    "start": 62
+  },
+  {
+    "name": "Both",
+    "title": "Jump Then Fall",
+    "artist": "Taylor Swift",
+    "youtube": "https://www.youtube.com/embed/vUHDR6Rg3Y4?si=tvATMZWYXHq7OcOK",
+    "start": 36
+  },
+  {
+    "name": "Both",
+    "title": "Opalite",
+    "artist": "Taylor Swift",
+    "youtube": "https://www.youtube.com/embed/1FVF-9KQiPo?si=yV8iRiVTbawjei1o",
+    "start": 247
+  },
+  {
+    "name": "Maddie",
+    "title": "Promiscuous",
+    "artist": "Nelly Fertado",
+    "youtube": "https://www.youtube.com/embed/0J3vgcE5i2o?si=_m4w3ubnk5pXLN-x",
+    "start": 0
+  },
+  {
+    "name": "Maddie",
+    "title": "Fergalicious",
+    "artist": "Fergie",
+    "youtube": "https://www.youtube.com/embed/5T0utQ-XWGY?si=HPsEFGZYGuMHxGTK",
+    "start": 0
+  },
+  {
+    "name": "Maddie",
+    "title": "I Don't Like",
+    "artist": "Chief Keef",
+    "youtube": "https://www.youtube.com/embed/6g5ZF6DUrHI?si=xmzBMhLkGQKnkIAY",
+    "start": 8
+  },
+  {
+    "name": "Maddie",
+    "title": "1,2 Step",
+    "artist": "Ciara",
+    "youtube": "https://www.youtube.com/embed/iBHNgV6_znU?si=qbdeptdxl2-KVz4j",
+    "start": 0
+  },
+  {
+    "name": "Maddie",
+    "title": "Did It On'em",
+    "artist": "Nicki Minaj",
+    "youtube": "https://www.youtube.com/embed/iKk94CzHz50?si=J0SY8jgp98W9SpSh",
+    "start": 91
+  },
+  {
+    "name": "Maddie",
+    "title": "DONTTRUSTME",
+    "artist": "3OH!3",
+    "youtube": "https://www.youtube.com/embed/mdB3Oyd5HtU?si=BySKORPEjmOJjjw9&amp;start=29",
+    "start": 29
+  },
+  {
+    "name": "Maddie",
+    "title": "No Hands",
+    "artist": "Waka Flocka Flame",
+    "youtube": "https://www.youtube.com/embed/skhxizRYxps?si=4AtQnf1LU0Q_NpFx&amp;start=9",
+    "start": 9
+  },
+  {
+    "name": "Maddie",
+    "title": "Say My Name",
+    "artist": "Destiny's Child",
+    "youtube": "https://www.youtube.com/embed/sQgd6MccwZc?si=0g1UzsXDqa93cQXc",
+    "start": 0
+  },
+  {
+    "name": "Maddie",
+    "title": "Buttons",
+    "artist": "The Pussycat Dolls",
+    "youtube": "https://www.youtube.com/embed/VCLxJd1d84s?si=MaTzTnWauFQsEar1&amp;start=19",
+    "start": 19
+  },
+  {
+    "name": "Maddie",
+    "title": "Irreplaceable",
+    "artist": "Beyonce",
+    "youtube": "https://www.youtube.com/embed/2EwViQxSJJQ?si=769P_kfdN2g6bLga",
+    "start": 26
+  },
+  {
+    "name": "Maddie",
+    "title": "If U Seek Amy",
+    "artist": "Britney Spears",
+    "youtube": "https://www.youtube.com/embed/0aEnnH6t8Ts?si=C7v7z_e75vk6YxPW",
+    "start": 50
+  },
+  {
+    "name": "Maddie",
+    "title": "Want U Back",
+    "artist": "Cher Lloyd",
+    "youtube": "https://www.youtube.com/embed/LPgvNlrBfb0?si=QpiJmKQqjJSUHKhY",
+    "start": 50
+  },
+  {
+    "name": "Maddie",
+    "title": "Lemonade",
+    "artist": "Gucci Mane",
+    "youtube": "https://www.youtube.com/embed/H6Q4s_ZdvAQ?si=3XDkgRbCN-RzaTyC",
+    "start": 68
+  },
+  {
+    "name": "Maddie",
+    "title": "Money Trees",
+    "artist": "Kendrick Lamar",
+    "youtube": "https://www.youtube.com/embed/hwR_1EP18eo?si=74NgmNAb5GEgiEjD",
+    "start": 79
+  },
+  {
+    "name": "Maddie",
+    "title": "Backseat Freestyle",
+    "artist": "Kendrick Lamar",
+    "youtube": "https://www.youtube.com/embed/EZW7et3tPuQ?si=tz91d-snIzo8ymbZ",
+    "start": 24
+  },
+  {
+    "name": "Maddie",
+    "title": "Crazy Story",
+    "artist": "King Von",
+    "youtube": "https://www.youtube.com/embed/YC8NmE3H-zs?si=9U2_wtqcTFzHnqAA",
+    "start": 15
+  },
+  {
+    "name": "Maddie",
+    "title": "6 Foot 7 Foot",
+    "artist": "Lil Wayne",
+    "youtube": "https://www.youtube.com/embed/c7tOAGY59uQ?si=84BBrSdXGcHC_LRv",
+    "start": 13
+  },
+  {
+    "name": "Maddie",
+    "title": "Ribs",
+    "artist": "Lorde",
+    "youtube": "https://www.youtube.com/embed/b7pE8AG1jjE?si=DHAN_Y_wF4ivrVEo",
+    "start": 168
+  },
+  {
+    "name": "Maddie",
+    "title": "Do I",
+    "artist": "Luke Bryan",
+    "youtube": "https://www.youtube.com/embed/j5GVa1yWYZM?si=a4uaPNJK039zqZ7r",
+    "start": 73
+  },
+  {
+    "name": "Maddie",
+    "title": "The Spins",
+    "artist": "Mac Miller",
+    "youtube": "https://www.youtube.com/embed/mkGT1c98soU?si=4aBYZ27fi9iTPty7",
+    "start": 51
+  },
+  {
+    "name": "Maddie",
+    "title": "33 Max Verstappen",
+    "artist": "Maxx Power",
+    "youtube": "https://www.youtube.com/embed/jG2AciJ3zHY?si=kEXU3LiYraQkQEhr",
+    "start": 0
+  },
+  {
+    "name": "Maddie",
+    "title": "Hot In Herre",
+    "artist": "Nelly",
+    "youtube": "https://www.youtube.com/embed/GeZZr_p6vB8?si=75hu87RGRSLOD0hx",
+    "start": 32
+  },
+  {
+    "name": "Maddie",
+    "title": "Itty Bitty Piggy",
+    "artist": "Nicki Minaj",
+    "youtube": "https://www.youtube.com/embed/9zRe5wnqSi4?si=2E-o44mV7KFzmEek",
+    "start": 75
+  },
+  {
+    "name": "Maddie",
+    "title": "Red Ruby Da Sleeze",
+    "artist": "Nicki Minaj",
+    "youtube": "https://www.youtube.com/embed/QBGX9QirWaU?si=7pmn06R2sIh_gnUe",
+    "start": 106
+  },
+  {
+    "name": "Maddie",
+    "title": "Orange Juice",
+    "artist": "Noah Kahan",
+    "youtube": "https://www.youtube.com/embed/WtKTfzNcX9Y?si=zLYJ6INbFSxHjofi",
+    "start": 80
+  },
+  {
+    "name": "Maddie",
+    "title": "Umbrella",
+    "artist": "Rihanna",
+    "youtube": "https://www.youtube.com/embed/CvBfHwUxHIk?si=IDC-kMdrYdWs9Rer",
+    "start": 55
+  },
+  {
+    "name": "Maddie",
+    "title": "Kiss Me Thru The Phone",
+    "artist": "Soulja Boy",
+    "youtube": "https://www.youtube.com/embed/47Fbo4kU2AU?si=LKEIBYX964BdZZVL",
+    "start": 0
+  },
+  {
+    "name": "Maddie",
+    "title": "Sports car",
+    "artist": "Tate McRae",
+    "youtube": "https://www.youtube.com/embed/7InTkBxPtK4?si=74cXgRO5rRnOL5Xt",
+    "start": 43
+  },
+  {
+    "name": "Maddie",
+    "title": "Now That We Don't Talk",
+    "artist": "Taylor Swift",
+    "youtube": "https://www.youtube.com/embed/yF4ulRTCn44?si=Ha-vpwfxrmfobaQa",
+    "start": 51
+  },
+  {
+    "name": "Maddie",
+    "title": "The Way I Loved You",
+    "artist": "Taylor Swift",
+    "youtube": "https://www.youtube.com/embed/DlexmDDSDZ0?si=E5vuUlflLYZuGqZ9",
+    "start": 61
+  },
+  {
+    "name": "Maddie",
+    "title": "King of My Heart",
+    "artist": "Taylor Swift",
+    "youtube": "https://www.youtube.com/embed/5U7bF68xcRg?si=EcSxXjjTeNFEKFSX",
+    "start": 38
+  },
+  {
+    "name": "Maddie",
+    "title": "Cruel Summer",
+    "artist": "Taylor Swift",
+    "youtube": "https://www.youtube.com/embed/ic8j13piAhQ?si=pDWIcyBwP79sU9up",
+    "start": 28
+  },
+  {
+    "name": "Maddie",
+    "title": "Our Song",
+    "artist": "Taylor Swift",
+    "youtube": "https://www.youtube.com/embed/Jb2stN7kH28?si=-hlsb5AUXxpa1vav",
+    "start": 34
+  },
+  {
+    "name": "Maddie",
+    "title": "Mr. Brightside",
+    "artist": "The Killers",
+    "youtube": "https://www.youtube.com/embed/gGdGFtwCNBE?si=APgmENoqaqDYt6KT",
+    "start": 10
+  },
+  {
+    "name": "Nick",
+    "title": "Forever and Ever, Amen",
+    "artist": "Randy Travis",
+    "youtube": "https://www.youtube.com/embed/sgJXbIP83A8?si=oxSow0g3UNcziaa7",
+    "start": 55
+  },
+  {
+    "name": "Nick",
+    "title": "Carrying Your Love With Me",
+    "artist": "George Strait",
+    "youtube": "https://www.youtube.com/embed/jH4YI1faPwU?si=fAzM9Nu9c9_uaqwG",
+    "start": 52
+  },
+  {
+    "name": "Nick",
+    "title": "Fishin' in the Dark",
+    "artist": "Nitty Gritty Dirt Band",
+    "youtube": "https://www.youtube.com/embed/jBRfkxUAyOk?si=Hu4te2hApLV6vBEE",
+    "start": 46
+  },
+  {
+    "name": "Nick",
+    "title": "Big Green Tractor",
+    "artist": "Jason Aldeen",
+    "youtube": "https://www.youtube.com/embed/rv8agst9o_0?si=s7Qw5r8AtOF5AkHW",
+    "start": 33
+  },
+  {
+    "name": "Nick",
+    "title": "International Harvester",
+    "artist": "Craig Morgan",
+    "youtube": "https://www.youtube.com/embed/ePjFAZKWKVo?si=s_w7cjEtJB9daxW1",
+    "start": 23
+  },
+  {
+    "name": "Nick",
+    "title": "She Thinks My Tractor's Sexy",
+    "artist": "Kenny Chesney",
+    "youtube": "https://www.youtube.com/embed/uWu4aynBK7E?si=3psTp4FciHCjW_iv",
+    "start": 50
+  },
+  {
+    "name": "Nick",
+    "title": "Boot Scootin' Boogie",
+    "artist": "Brooks & Dunn",
+    "youtube": "https://www.youtube.com/embed/d05tQrhNMkA?si=QjRGEkn9bATyZ-z2",
+    "start": 53
+  },
+  {
+    "name": "Nick",
+    "title": "Islands in the Stream",
+    "artist": "Dolly Parton",
+    "youtube": "https://www.youtube.com/embed/UaNGtgYwSsU?si=eUsyEjRcfxBLPhOR",
+    "start": 65
+  },
+  {
+    "name": "Nick",
+    "title": "Red Solo Cup",
+    "artist": "Toby Keith",
+    "youtube": "https://www.youtube.com/embed/BKZqGJONH68?si=_D3wqRSEeSh8u1TV",
+    "start": 32
+  },
+  {
+    "name": "Nick",
+    "title": "Deeper Than the Holler",
+    "artist": "Randy Travis",
+    "youtube": "https://www.youtube.com/embed/hCgSbb_hJA0?si=LE-yFKy1NPjFHUzE",
+    "start": 55
+  },
+  {
+    "name": "Nick",
+    "title": "Save a Horse, Ride a Cowboy",
+    "artist": "Big & Rich",
+    "youtube": "https://www.youtube.com/embed/S9ZbuIRPwFg?si=AbHWuJa8uaIW92S2",
+    "start": 46
+  },
+  {
+    "name": "Nick",
+    "title": "Neon Moon",
+    "artist": "Brooks & Dunn",
+    "youtube": "https://www.youtube.com/embed/AxFdeZER8Eg?si=liTS3kE0fQYYCAgN",
+    "start": 45
+  },
+  {
+    "name": "Nick",
+    "title": "Big Iron",
+    "artist": "Marty Robbins",
+    "youtube": "https://www.youtube.com/embed/-NuX79Ud8zI?si=BRPPYo8WTV_aLgOC",
+    "start": 18
+  },
+  {
+    "name": "Nick",
+    "title": "If I Didn't Have You",
+    "artist": "Randy Travis",
+    "youtube": "https://www.youtube.com/embed/_LivzZkV2F8?si=L_P9YqF088LiO4xG",
+    "start": 50
+  },
+  {
+    "name": "Nick",
+    "title": "Country Girl",
+    "artist": "Luke Bryan",
+    "youtube": "https://www.youtube.com/embed/7HX4SfnVlP4?si=eY-hWeFCVx3She03",
+    "start": 61
+  },
+  {
+    "name": "Nick",
+    "title": "Sounds Like The Radio",
+    "artist": "Zach Top",
+    "youtube": "https://www.youtube.com/embed/cOKHBwNPQKo?si=zlDQL_phapb-5VHY",
+    "start": 116
+  },
+  {
+    "name": "Nick",
+    "title": "Something Like That",
+    "artist": "Tim McGraw",
+    "youtube": "https://www.youtube.com/embed/HYRFgWbalBE?si=MtcibulwuN5wPT8I",
+    "start": 40
+  },
+  {
+    "name": "Nick",
+    "title": "Life Is a Highway",
+    "artist": "Rascal Flatts",
+    "youtube": "https://www.youtube.com/embed/5tXh_MfrMe0?si=ossamnbAQ8KuZ3C0",
+    "start": 84
+  },
+  {
+    "name": "Nick",
+    "title": "Chicken Fried",
+    "artist": "Zac Brown Band",
+    "youtube": "https://www.youtube.com/embed/e4ujS1er1r0?si=Bh6pfH0MULfSPIO1",
+    "start": 109
+  },
+  {
+    "name": "Nick",
+    "title": "Should've Been A Cowboy",
+    "artist": "Toby Keith",
+    "youtube": "https://www.youtube.com/embed/aIq1LvzSLsk?si=rPW3vpivTybBGLtP",
+    "start": 47
+  },
+  {
+    "name": "Nick",
+    "title": "Chattahoochee",
+    "artist": "Alan Jackson",
+    "youtube": "https://www.youtube.com/embed/JW5UEW2kYvc?si=yGfzccAhDzJvMmdo",
+    "start": 35
+  },
+  {
+    "name": "Nick",
+    "title": "All My Ex's Live in Texas",
+    "artist": "George Strait",
+    "youtube": "https://www.youtube.com/embed/Ha3SSgWK-oE?si=0rCI2DXJuxpVKLhO",
+    "start": 75
+  },
+  {
+    "name": "Nick",
+    "title": "The Devil Went Down to Georgia",
+    "artist": "Charlie Daniels Band",
+    "youtube": "https://www.youtube.com/embed/sh7BZf7D5Bw?si=9W6nRQxhwyhdKZqV",
+    "start": 15
+  },
+  {
+    "name": "Nick",
+    "title": "Friends in Low Places",
+    "artist": "Garth Brooks",
+    "youtube": "https://www.youtube.com/embed/b7P97b64Q5E?si=AtbyggUO0uOMZhPU",
+    "start": 46
+  },
+  {
+    "name": "Nick",
+    "title": "It's Five O' Clock Somewhere",
+    "artist": "Alan Jackson, Jimmy Buffett",
+    "youtube": "https://www.youtube.com/embed/BPCjC543llU?si=t6Bn8APAdi2wKOkF",
+    "start": 39
+  },
+  {
+    "name": "Nick",
+    "title": "Margaritaville",
+    "artist": "Jimmy Buffett",
+    "youtube": "https://www.youtube.com/embed/mrF4nF8VUb4?si=AkvOrfmQrhuwLxuM",
+    "start": 41
+  },
+  {
+    "name": "Nick",
+    "title": "Simple",
+    "artist": "Florida Georgia Line",
+    "youtube": "https://www.youtube.com/embed/3GeaYy6zlXU?si=Elu3NVg1HPDlpr8K",
+    "start": 78
+  },
+  {
+    "name": "Nick",
+    "title": "Family Tradition",
+    "artist": "Hank Williams Jr",
+    "youtube": "https://www.youtube.com/embed/GdDyEqnhvNI?si=rV0S32_0vmFXfrs2",
+    "start": 32
+  },
+  {
+    "name": "Nick",
+    "title": "Beer Never Broke My Heart",
+    "artist": "Luke Combs",
+    "youtube": "https://www.youtube.com/embed/7Lb9dq-JZFI?si=Vv13i1Z7S-apJyYa",
+    "start": 67
+  },
+  {
+    "name": "Nick",
+    "title": "Honky Tonk Badonkadonk",
+    "artist": "Trace Adkins",
+    "youtube": "https://www.youtube.com/embed/vNVguvNE7qc?si=uLT22KhtFSdpAZ3l",
+    "start": 47
+  },
+  {
+    "name": "Nick",
+    "title": "Check Yes or No",
+    "artist": "George Strait",
+    "youtube": "https://www.youtube.com/embed/NHxS8wlDngI?si=TOZhaH2tsgouYwZ7",
+    "start": 45
+  },
+  {
+    "name": "Nick",
+    "title": "I Like It I Love It",
+    "artist": "Tim McGraw",
+    "youtube": "https://www.youtube.com/embed/yHtLF6IicNk?si=1kTbvLLcMwgXc6fW",
+    "start": 50
+  }
 ]

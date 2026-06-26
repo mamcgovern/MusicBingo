@@ -26,10 +26,6 @@ export default function Round({ round, playerName, gameStarted }) {
       <div className="round-layout">
         {/* Left: Video */}
         <div className="left">
-          <div className="round-header">
-            <h2 className="script">Music Bingo</h2>
-          </div>
-
           <VideoPlayer
             startGame={gameStarted}
           />

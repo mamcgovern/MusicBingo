@@ -4,20 +4,21 @@ import playlistData from "../playlist.json";
 export default function VideoPlayer({ startGame }) {
   const playerRef = useRef(null);
   const playerInstance = useRef(null);
-  const timerRef = useRef(null);
 
   const playlistRef = useRef([]);
   const songIndexRef = useRef(0);
 
-  const timePerRound = 5000; //TODO change to 30000
-
-  const remainingTimeRef = useRef(timePerRound);
+  const timerRef = useRef(null);
   const timerStartRef = useRef(null);
+  const timePerSong = 5000; // TODO change to 30000
+  const remainingTimeRef = useRef(timePerSong);
 
   const [currentSong, setCurrentSong] = useState(null);
 
   useEffect(() => {
     if (!startGame) return;
+
+    console.log("🎮 Game started");
 
     const availableSongs = playlistData.filter(
       (song) => song.youtube && song.youtube.trim() !== ""
@@ -25,6 +26,8 @@ export default function VideoPlayer({ startGame }) {
 
     playlistRef.current = shuffleArray([...availableSongs]);
     songIndexRef.current = 0;
+
+    console.log("🔀 Playlist ready");
 
     const loadPlayer = () => {
       if (playerInstance.current) return;
@@ -34,23 +37,26 @@ export default function VideoPlayer({ startGame }) {
         width: "560",
         playerVars: {
           autoplay: 1,
-          controls: 1,
+          controls: 1, // ✅ BACK ON
           rel: 0,
         },
         events: {
           onReady: () => {
+            console.log("✅ Player ready");
             playNextSong();
           },
 
           onStateChange: (event) => {
-            // Pause timer when video pauses
-            if (event.data === window.YT.PlayerState.PAUSED) {
-              pauseSongTimer();
+            console.log("📡 State:", event.data);
+
+            if (event.data === window.YT.PlayerState.PLAYING) {
+              console.log("▶️ PLAYING → resume timer");
+              resumeTimer();
             }
 
-            // Resume timer when video resumes
-            if (event.data === window.YT.PlayerState.PLAYING) {
-              resumeSongTimer();
+            if (event.data === window.YT.PlayerState.PAUSED) {
+              console.log("⏸️ PAUSED → pause timer");
+              pauseTimer();
             }
           },
         },
@@ -62,7 +68,7 @@ export default function VideoPlayer({ startGame }) {
       tag.src = "https://www.youtube.com/iframe_api";
       document.body.appendChild(tag);
       window.onYouTubeIframeAPIReady = loadPlayer;
-    } else if (window.YT.Player) {
+    } else {
       loadPlayer();
     }
 
@@ -70,11 +76,15 @@ export default function VideoPlayer({ startGame }) {
       clearTimeout(timerRef.current);
 
       if (songIndexRef.current >= playlistRef.current.length) {
+        console.log("🔁 reshuffling playlist");
         playlistRef.current = shuffleArray([...availableSongs]);
         songIndexRef.current = 0;
       }
 
       const song = playlistRef.current[songIndexRef.current];
+
+      console.log("🎵 Now playing:", song.title, "-", song.artist);
+
       setCurrentSong(song);
 
       const videoId = getVideoId(song.youtube);
@@ -86,84 +96,56 @@ export default function VideoPlayer({ startGame }) {
 
       songIndexRef.current++;
 
-      remainingTimeRef.current = timePerRound;
+      remainingTimeRef.current = timePerSong;
+      timerStartRef.current = null;
     }
 
-    function startSongTimer() {
+    function startTimer() {
       clearTimeout(timerRef.current);
 
       timerStartRef.current = Date.now();
 
       timerRef.current = setTimeout(() => {
-        remainingTimeRef.current = timePerRound;
+        console.log("⏰ 30s up → next song");
+        remainingTimeRef.current = timePerSong;
         playNextSong();
       }, remainingTimeRef.current);
     }
 
-    function pauseSongTimer() {
+    function resumeTimer() {
+      // only start timer if song is active
+      if (!timerStartRef.current) {
+        startTimer();
+        return;
+      }
+
+      const elapsed = Date.now() - timerStartRef.current;
+
+      remainingTimeRef.current = Math.max(
+        0,
+        remainingTimeRef.current - elapsed
+      );
+
+      startTimer();
+    }
+
+    function pauseTimer() {
       if (!timerStartRef.current) return;
 
       clearTimeout(timerRef.current);
 
       const elapsed = Date.now() - timerStartRef.current;
+
       remainingTimeRef.current = Math.max(
         0,
         remainingTimeRef.current - elapsed
       );
+
+      console.log("⏸️ Timer paused, remaining:", remainingTimeRef.current);
     }
-
-    function resumeSongTimer() {
-      clearTimeout(timerRef.current);
-
-      timerStartRef.current = Date.now();
-
-      timerRef.current = setTimeout(() => {
-        remainingTimeRef.current = timePerRound;
-        playNextSong();
-      }, remainingTimeRef.current);
-    }
-
-    function getVideoId(url) {
-      const match = url.match(
-        /(?:youtube\.com\/embed\/|youtu\.be\/)([a-zA-Z0-9_-]{11})/
-      );
-
-      return match ? match[1] : "";
-    }
-
-    function shuffleArray(array) {
-      const shuffled = [...array];
-
-      for (let i = shuffled.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-
-        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-      }
-
-      return shuffled;
-    }
-
-    // Make timer functions available to onStateChange
-    window.startSongTimer = startSongTimer;
-    window.resumeSongTimer = resumeSongTimer;
-    window.pauseSongTimer = pauseSongTimer;
-
-    // Start timer once first song loads
-    const timerStarter = setInterval(() => {
-      if (
-        playerInstance.current &&
-        playerInstance.current.getPlayerState &&
-        playerInstance.current.getPlayerState() ===
-          window.YT.PlayerState.PLAYING
-      ) {
-        startSongTimer();
-        clearInterval(timerStarter);
-      }
-    }, 250);
 
     return () => {
       clearTimeout(timerRef.current);
-      clearInterval(timerStarter);
 
       if (playerInstance.current) {
         playerInstance.current.destroy();
@@ -172,10 +154,27 @@ export default function VideoPlayer({ startGame }) {
     };
   }, [startGame]);
 
+  function getVideoId(url) {
+    const match = url.match(
+      /(?:youtube\.com\/embed\/|youtu\.be\/)([a-zA-Z0-9_-]{11})/
+    );
+    return match ? match[1] : "";
+  }
+
+  function shuffleArray(array) {
+    const copy = [...array];
+
+    for (let i = copy.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [copy[i], copy[j]] = [copy[j], copy[i]];
+    }
+
+    return copy;
+  }
+
   return (
     <div>
       <h3>Now Playing:</h3>
-
       {currentSong ? (
         <p>
           {currentSong.title} - {currentSong.artist}
