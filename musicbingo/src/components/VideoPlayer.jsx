@@ -10,7 +10,7 @@ export default function VideoPlayer({ startGame }) {
 
   const timerRef = useRef(null);
   const timerStartRef = useRef(null);
-  const timePerSong = 5000; // TODO change to 30000
+  const timePerSong = 30000; // TODO change to 30000
   const remainingTimeRef = useRef(timePerSong);
 
   const [currentSong, setCurrentSong] = useState(null);
