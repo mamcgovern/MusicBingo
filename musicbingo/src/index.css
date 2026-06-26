@@ -63,6 +63,13 @@ html, body {
   margin: 0;
 }
 
+.subtitle {
+  font-family: 'Playfair Display', serif;
+  color: #656565;
+  font-style: italic;
+  font-size: small;
+}
+
 .player-name.nick {
   color: #d67a91; /* pink */
 }

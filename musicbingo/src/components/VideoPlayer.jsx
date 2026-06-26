@@ -172,16 +172,26 @@ export default function VideoPlayer({ startGame }) {
     return copy;
   }
 
+  function display(song) {
+    if (song) {
+      return (
+        <div>
+          <p>{currentSong.title} - {currentSong.artist}</p>
+          <p className="subtitle">This song belongs to: {currentSong.name}</p>
+        </div>
+      )
+    }
+    return (
+      <div>
+        <p>Loading song...</p>
+      </div>
+    );
+  }
+
   return (
     <div>
       <h3>Now Playing:</h3>
-      {currentSong ? (
-        <p>
-          {currentSong.title} - {currentSong.artist}
-        </p>
-      ) : (
-        <p>Loading song...</p>
-      )}
+      {display(currentSong)}
 
       <div ref={playerRef}></div>
     </div>
